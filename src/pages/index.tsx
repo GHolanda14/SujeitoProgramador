@@ -46,7 +46,7 @@ export default function Home({ conteudo }: HomeProps) {
               </button>
             </a>
           </section>
-          <img className="max-w-[640px]" src="/images/conteudos.png" />
+          <img className="max-w-[640px]" src="/images/conteudos.png" alt="Diversas imagens de cursos"/>
         </div>
 
         <hr className="w-[calc(100vw-17px)] text-white h-1" />
@@ -63,13 +63,14 @@ export default function Home({ conteudo }: HomeProps) {
           <img
             src={conteudo.fotoMobile}
             className="max-w-[550px] mt-5 xl:mt-0"
+            alt="Foto de um aplicativo em 2 smartphones"
           />
         </div>
 
         <hr className="w-[calc(100vw-17px)] text-white h-1" />
 
         <div className="flex items-center justify-center max-w-6xl my-[5.5rem] mx-auto min-[950px]:flex-row flex-col">
-          <img src={conteudo.fotoWeb} className="max-w-[550px]" />
+          <img src={conteudo.fotoWeb} className="max-w-[550px]" alt="Uma aplicação em diversos dispositivos"/>
           <section className="max-w-2xl">
             <h2 className="text-3xl mt-5 leading-[3rem] font-bold xl:mt-0 xl:text-4xl xl:leading-[4.5rem]">
               {conteudo.tituloWeb}
