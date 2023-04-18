@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="h-36 minHeader:h-24 border-b border-b-solid border-b-gray-200 bg-gray-700">
       <div className="flex flex-col minHeader:flex-row max-w-6xl h-full minHeader:my-0 mx-auto py-2 px-0 minHeader:py-0 minHeader:px-6 items-center justify-normal minHeader:justify-between">
-        <div className="flex flex-col minHeader:flex-row h-full items-center gap-7 minHeader:gap-16">
+        <div className="flex flex-col minHeader:flex-row h-full items-center gap-4 minHeader:gap-16">
           <Link href={"/"}>
             <Image
               width={300}
@@ -20,7 +20,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="flex flex-row justify-between min-w-[350px] h-full items-center">
+          <nav className="flex flex-row justify-between minHeader:justify-evenly lg:justify-between min-w-[350px] h-full items-center">
             {[
               { texto: "Home", href: "/" },
               { texto: "Conteúdos", href: "/posts" },

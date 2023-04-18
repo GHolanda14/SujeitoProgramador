@@ -22,7 +22,7 @@ export default function Post({ post }: PostProps) {
       <Head>
         <title>{post?.titulo}</title>
       </Head>
-      <MainContainer classe="justify-center">
+      <MainContainer classe="justify-center mb-8">
         <article className="post">
           <Image
             src={capa}
