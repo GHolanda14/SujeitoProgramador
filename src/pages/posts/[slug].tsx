@@ -36,12 +36,12 @@ export default function Post({ post }: PostProps) {
             }
             className="max-w-full max-h-[410px] bg-gradient-to-b from-blue-900 to-transparent rounded-md"
           />
-          <div className="conteudo-post">
+          <div className="flex flex-col max-w-[720px] mt-8 leading-loose text-lg">
             <h1 className="text-[2rem] font-bold leading-snug">{titulo}</h1>
             <time className="text-sm text-gray-200">{data}</time>
             <div
               dangerouslySetInnerHTML={{ __html: descricao }}
-              className="text-sm text-gray-100 leading-6"
+              className="divDinamica"
             ></div>
           </div>
         </article>

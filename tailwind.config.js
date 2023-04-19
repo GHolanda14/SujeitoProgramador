@@ -51,43 +51,55 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addComponents }) {
-      addComponents({
+    plugin(function ({ addComponents, addBase, theme }) {
+      const botao = {
+        button: {
+          fontSize: theme("fontSize.xl"),
+          backgroundColor: theme("colors.yellow.500"),
+        },
+      };
+
+      addBase(botao);
+
+      const divDinamica = {
+        ".divDinamica": {
+          fontSize: theme("fontSize.sm"),
+          color: theme("textColor.gray.100"),
+          lineHeight: theme("lineHeight.6"),
+
+          "p, ul": {
+            margin: "1.5rem 0",
+          },
+          iframe: {
+            width: "100%",
+            minHeight: "350px",
+            padding: "0.5rem 0",
+          },
+          "a:hover": {
+            color: theme("colors.yellow.500"),
+          },
+          pre: {
+            backgroundColor: "#15171B",
+            padding: "0.25rem",
+            borderRadius: "1rem",
+          },
+        },
+      };
+      const components = {
+        button: {
+          "&:hover": {
+            backgroundColor: theme("colors.blue.900"),
+          },
+        },
         ".post": {
           display: "flex",
           flexDirection: "column",
           marginTop: "3.5rem",
           alignItems: "center",
         },
-        ".conteudo-post": {
-          display: "flex",
-          flexDirection: "column",
-          maxWidth: "720px",
-          marginTop: "2rem",
-          lineHeight: "2rem",
-          fontSize: "1.125rem",
-        },
-        ".conteudo-post h3": {
-          fontSize: "1.5rem",
-          lineHeight: "2rem",
-        },
-        ".conteudo-post p,ul": {
-          margin: "1.5rem 0",
-        },
-        ".conteudo-post iframe": {
-          width: "100%",
-          minHeight: "350px",
-          padding: "0.5rem 0",
-        },
-        ".conteudo-post a:hover": {
-          color: "#FFBE16",
-        },
-        ".conteudo-post pre": {
-          backgroundColor: "#15171B",
-          padding: "0.25rem",
-          borderRadius: "1rem",
-        },
-      });
+      };
+      addComponents(components);
+      addComponents(divDinamica);
     }),
   ],
 };

@@ -15,6 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 @layer components {
   .active {
     @apply text-yellow-500 font-bold;
