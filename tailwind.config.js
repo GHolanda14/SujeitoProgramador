@@ -51,16 +51,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addComponents, addBase, theme }) {
-      const botao = {
-        button: {
-          fontSize: theme("fontSize.xl"),
-          backgroundColor: theme("colors.yellow.500"),
-        },
-      };
-
-      addBase(botao);
-
+    plugin(function ({ addComponents, theme }) {
       const divDinamica = {
         ".divDinamica": {
           fontSize: theme("fontSize.sm"),
@@ -68,37 +59,28 @@ module.exports = {
           lineHeight: theme("lineHeight.6"),
 
           "p, ul": {
-            margin: "1.5rem 0",
+            margin: `${theme("spacing.6")} 0`,
+          },
+          h3: {
+            fontSize: theme("fontSize.2xl"),
+            lineHeight: theme("lineHeight.loose"),
           },
           iframe: {
-            width: "100%",
+            width: theme("width.full"),
             minHeight: "350px",
-            padding: "0.5rem 0",
+            padding: `${theme("spacing.2")} 0`,
           },
           "a:hover": {
             color: theme("colors.yellow.500"),
           },
           pre: {
-            backgroundColor: "#15171B",
-            padding: "0.25rem",
-            borderRadius: "1rem",
+            backgroundColor: theme("colors.gray.700"),
+            padding: theme("spacing.1"),
+            borderRadius: theme("spacing.4"),
           },
         },
       };
-      const components = {
-        button: {
-          "&:hover": {
-            backgroundColor: theme("colors.blue.900"),
-          },
-        },
-        ".post": {
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "3.5rem",
-          alignItems: "center",
-        },
-      };
-      addComponents(components);
+
       addComponents(divDinamica);
     }),
   ],

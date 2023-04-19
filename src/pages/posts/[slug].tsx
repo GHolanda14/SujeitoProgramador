@@ -23,7 +23,7 @@ export default function Post({ post }: PostProps) {
         <title>{post?.titulo}</title>
       </Head>
       <MainContainer classe="justify-center mb-8">
-        <article className="post">
+        <article className="flex flex-col mt-14 items-center">
           <Image
             src={capa}
             alt={titulo}
